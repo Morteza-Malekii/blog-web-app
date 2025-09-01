@@ -6,16 +6,10 @@ import path from 'path';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: ['resources/assets/css/app.css', 'resources/assets/js/app.js'],
             refresh: true,
         }),
         tailwindcss(),
-        resolve:{
-        alias:{
-            '#':'resources/css/dahsboard/',
-            '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
-        }
-    }
     ],
     resolve:{
         alias:{
