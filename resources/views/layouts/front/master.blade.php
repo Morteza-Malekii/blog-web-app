@@ -1,0 +1,8 @@
+@include('front.partial.common.header')
+@include('front.partial.common.SidebarOfCanvasMain')
+@include('front.partial.common.TopNav')
+@yield('content')
+@include('front.partial.common.BottomNav')
+@include('front.partial.common.Bookmark')
+@include('front.partial.common.Profile')
+@include('front.partial.common.footer')
