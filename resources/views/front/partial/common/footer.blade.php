@@ -1,4 +1,3 @@
-<!-- Footer START  -->
 <footer class="bg-dark d-none d-lg-block">
     <div class="container pt-5 ">
         <!-- Widgets START -->
@@ -139,7 +138,6 @@ Footer END -->
 <!-- =======================
 JS libraries, plugins and custom scripts -->
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- Template Functions -->
 
@@ -165,11 +163,77 @@ JS libraries, plugins and custom scripts -->
     });
 </script> -->
 
-
-</div>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+{{-- swiper triger --}}
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        slidesOffsetAfter: 2.2,
+        slidesOffsetBefore: 2.2,
+        slidesPerView: 1.3,
+        spaceBetween: 20,
+        loop: true,
+        breakpoints: {
+            // when window width is >= 320px
+            768: {
+                slidesPerView: 2.3,
+            }
+        }
+        // If we need pagination
+        // pagination: {
+        // 	el: '.swiper-pagination',
+        // },
+
+        // Navigation arrows
+        // navigation: {
+        // 	nextEl: '.swiper-button-next',
+        // 	prevEl: '.swiper-button-prev',
+        // },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        // 	el: '.swiper-scrollbar',
+        // },
+    });
+
+    const swiper_cats = new Swiper('.swiper-cats', {
+        // Optional parameters
+        slidesOffsetAfter: 0,
+        slidesOffsetBefore: 0,
+        slidesPerView: 2.3,
+        spaceBetween: 10,
+        loop: true,
+        breakpoints: {
+            // when window width is >= 320px
+            768: {
+                slidesPerView: 6,
+            }
+        }
+    });
+</script>
+{{-- sidebar off canvas main --}}
+<script>
+    document.body.addEventListener('click', function() {
+        document.getElementById("main").style.cssText = "margin: 0;"
+    }, true);
+
+    document.getElementById('closedSidebar').addEventListener('click', function() {
+        document.getElementById("main").style.cssText = "margin: 0;";
+    })
+
+
+
+    document.getElementById('openedSidebar').addEventListener('click', function() {
+        const mediaQuery = window.matchMedia('(min-width: 768px)')
+        if (mediaQuery.matches) {
+            document.getElementById("main").style.cssText = "margin: 0 -260px 0 0;";
+        } else {
+            document.getElementById("main").style.cssText = "margin: 0 -750px 0 0;";
+        }
+    })
+</script>
 </body>
 
 </html>

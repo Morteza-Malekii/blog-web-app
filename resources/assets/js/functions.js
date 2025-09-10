@@ -1,10 +1,10 @@
+import { Tooltip, Popover } from 'bootstrap';
 /**
 * Blogzine - Blog and Magazine Bootstrap 5 Theme
 *
 * @author Webestica (https://www.webestica.com/)
 * @version 1.3.1
 **/
-
 
 /* ===================
 Table Of Content
@@ -420,7 +420,7 @@ var e = {
     toolTipFunc: function () {
         var tooltipTriggerList = [].slice.call(e.selectAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
+          return new Tooltip(tooltipTriggerEl)
         })
     },
     // END: Tooltip
@@ -430,7 +430,7 @@ var e = {
     popOverFunc: function () {
         var popoverTriggerList = [].slice.call(e.selectAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-          return new bootstrap.Popover(popoverTriggerEl)
+          return new Popover(popoverTriggerEl)
         })
     },
     // END: Popover

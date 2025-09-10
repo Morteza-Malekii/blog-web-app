@@ -1,6 +1,6 @@
     <!-- =======================
-Header START -->
-    <header class="navbar-light navbar-sticky header-static">
+Nav START -->
+    <nav class="navbar-light navbar-sticky header-static">
         <div class="navbar-top d-none d-lg-block small">
             <!-- Divider -->
             <div class="border-bottom border-2 border-primary opacity-1"></div>
@@ -158,6 +158,6 @@ Header START -->
         </nav>
 
         <!-- Logo Nav END -->
-    </header>
+    </nav>
     <!-- =======================
-Header END -->
+nav END -->

@@ -1,5 +1,12 @@
     <section class="pt-4 pb-0 card-grid ">
         <div class="container pe-0">
+
+            @if (session('successLogin'))
+            <div class="alert alert-success">
+                {{session('successLogin')}}
+            </div>
+            @endif
+            
             <p class="fw-bold mb-4">اخبار روز</p>
             <div class="swiper" dir="rtl">
                 <!-- Additional required wrapper -->
@@ -31,7 +38,7 @@
                                                 Maleki</a></span>
                                     </div>
                                     <h2 class="w-100 rounded px-3 py-3 slider-topic-title position-absolute bottom-0">
-                                        <a class="text-white" href="post-single-4.html" class="">ده نشانه
+                                        <a class="text-white" href="post-single-4" class="">ده نشانه
                                             نسل جدید هدست های واقعیت مجازی سونی</a>
                                     </h2>
                                 </div>
