@@ -17,7 +17,15 @@
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
-
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onRegisterSubmit(token) {
+            document.getElementById("registerForm").submit();
+        }
+        function onLoginSubmit(token) {
+            document.getElementById("loginForm").submit();
+        }
+    </script>
     <!-- Theme CSS -->
 
     <style>

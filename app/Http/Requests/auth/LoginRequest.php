@@ -2,10 +2,11 @@
 
 namespace App\Http\Requests\auth;
 
+use App\Rules\GoogleRecaptchaV3;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Password;
 
-class AuthRequest extends FormRequest
+class LoginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,17 +24,9 @@ class AuthRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=>'required|min:3',
-            'email'=>'required|email|unique:users,email',
-            'password' =>['required','confirmed',Password::min(6)->max(20)->mixedCase()
-            ->letters()->numbers()->symbols()->uncompromised()],
+            'email'=>'required',
+            'password' =>'required',
+            'g-recaptcha-response'=>['required',new GoogleRecaptchaV3('submitLogin',config('services.google_recaptcha_v3.minscore'))]
         ];
     }
-
-    // public function messages()
-    // {
-    //     return [
-    //         'name.required'=>'اسمتو وارد کن عزیز'
-    //     ];
-    // }
 }

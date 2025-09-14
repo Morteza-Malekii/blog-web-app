@@ -1,12 +1,5 @@
     <section class="pt-4 pb-0 card-grid ">
         <div class="container pe-0">
-
-            @if (session('successLogin'))
-            <div class="alert alert-success">
-                {{session('successLogin')}}
-            </div>
-            @endif
-            
             <p class="fw-bold mb-4">اخبار روز</p>
             <div class="swiper" dir="rtl">
                 <!-- Additional required wrapper -->

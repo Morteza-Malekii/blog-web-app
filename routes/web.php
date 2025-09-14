@@ -24,8 +24,10 @@ Route::group(['prefix'=>'/dashboard'],function(){
     Route::get('/editCategory', function(){return view('dashboard.editCategory');});
 });
 
-Route::group(['prefix'=>'/auth'],function(){
-    Route::view('/register', 'auth.register')->name('register');
-    Route::post('/register', [AuthController::class, 'register']);
-});
+// Auth routes
+Route::get('/login',[AuthController::class,'loginForm'])->name('login.form');
+Route::post('/login',[AuthController::class,'login'])->name('login');
+Route::get('/register', [AuthController::class,'registerForm'])->name('register.form');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+
 
